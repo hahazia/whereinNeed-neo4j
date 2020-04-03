@@ -1,0 +1,23 @@
+<head>
+  <style>
+      a p:hover{
+      color: #064579;
+    }
+  </style>
+</head>
+
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <h1>Ratings:</h1>
+        {% for rating in ratings %}
+          <hr>
+          <h3>{{rating}}</h3>
+          {%for charity in charities%}
+             {%if charity.rating == rating%}
+             <a href={{charity.webURL}}><p>{{charity.name}}</p></a>             
+             {%endif%}
+          {% endfor %}    
+        {% endfor %}
+</div>
+{% endblock %}

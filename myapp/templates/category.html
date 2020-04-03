@@ -1,0 +1,25 @@
+<head>
+  <style>
+      a p:hover{
+      color: #064579;
+    }
+  </style>
+</head>
+
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <h1>Category:</h1>
+    {% for category in categories %}
+      <hr>
+      <h3>{{category}}</h3> 
+      {%for charity in charities%}
+        {%for categ in charity.category.all%}
+          {%if category == categ%}
+          <a href={{charity.webURL}}><p>{{charity.name}}</p></a>
+          {%endif%}  
+        {%endfor%}
+      {%endfor%}      
+    {% endfor %}
+</div>
+{% endblock %}

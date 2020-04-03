@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div>
+  <h3> Welcome to your profile page, {{ user.username }}!</h3>
+  {% if user.is_authenticated %}
+    <p>First Name: {{ user.first_name }}</p>
+
+  <br>
+  <p>Last Name: {{ user.last_name }}</p>
+  <br>
+  <p>Email: {{ user.email }}</p>
+
+  <p>bio: {{ user.bio }}</p>
+  {% endif %}
+
+</div>
+
+
+
+
+{% endblock %}

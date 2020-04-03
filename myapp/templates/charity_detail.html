@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+  <a href={{charity.webURL}}><h2>{{ charity.name }}</h2></a>
+  {% if charity.category.all %}
+    <h5>Category</h5>
+    <ul>
+      {% for cat in charity.category.all %}
+        <li>{{ cat.name }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <br>
+  <h5>Rating</h5>
+  <p>{{ charity.rating }}</p>
+  <br>
+  <h5>Address</h5>
+  <p>City: {{ charity.city }}</p>
+  {% if charity.zipCode %}
+    <p>Zip Code: {{ charity.zipCode }}</p>
+  {% endif %}
+  <p>Street: {{ charity.addr }}</p>
+  <br>
+  <h5>Our Mission</h5>
+  <p>{{ charity.mission }}</p>
+</div>
+
+
+
+<form action="{% url 'like' %}" method="post">
+  {% csrf_token %}
+  {% if is_liked %}
+    <button type="submit" name="charity_id" value="{{ charity.id }}" class="btn btn-danger">Dislike</button>
+  {% else %}
+    <button type="submit" name="charity_id" value="{{ charity.id }}" class="btn btn-primary">Like</button>
+  {% endif %}
+  {{ total_likes }} People Like 
+</form>
+
+{% endblock %}

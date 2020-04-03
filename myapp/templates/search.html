@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+.listforsearch li {
+    float: left;
+    list-style-position: inside;
+    list-style-type: disc;
+    margin-right: 1em;
+}
+
+@media screen and (max-width: 600px) {
+    .listforsearch li {
+        float: none;
+        list-style-position: outside;
+        margin: 0;
+    }
+}
+</style>
+
+<h1>Search Page</h1>
+
+<br/>
+<form action="{% url 'searchposts' %}" method="GET" value="{{request.GET.q}}">
+Search <input type="text" name="q" value="{{request.GET.q}}" placeholder="Search organizations"/>
+<input type="submit" name="submit" value="Search"/>
+</form>
+
+
+{% if request.GET.q != '' %}
+{% if charities %}
+<h1>Results for <b>{{ request.GET.q }}</b></h1>
+<br/>
+
+<ul class="listforsearch">
+ {% for res in result %}
+  <li><b>{{ res.num }} rate-{{ res.rating }} organizations</b></li>
+  {% endfor %}
+</ul> <b>in total:</b>
+
+<br/><br/><br/>
+
+
+  {% for charity in charities %}
+
+    <a href="{% url 'charity_detail' charity.id %}"><p>{{ charity.name }}</p></a>
+    <br/>
+
+    {% endfor %}
+    {% if charities.has_other_pages %}
+    <div class="pagination">
+        {% if charities.has_previous %}
+            <span class="step-links"><a href="?page=
+                    {{ charities.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">previous</a></span>
+        {% endif %}
+
+                Page {{ charities.number }} of {{ charities.paginator.num_pages }}
+
+        {% if charities.has_next %}
+            <span class="step-links"><a
+                    href="?page={{ charities.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">next</a></span>
+        {% endif %}
+    </div>
+
+
+
+
+{% endif %}
+  {% else %}
+  No search results
+{% endif %}
+{% endif %}
+
+
+{% endblock %}

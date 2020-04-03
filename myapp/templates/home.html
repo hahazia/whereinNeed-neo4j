@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div style="text-align:center">
+  <a href="search" >
+    <button type="button" style="font-size: 20px;" >
+        Search for the charities you interested in!
+     </button>
+</a>      
+</div>
+
+  {% for charity in charities %}
+  {# Each "charity" is a Charity model object. #}
+    <div class = "charityname">
+      <a   href = "{% url 'charity_detail' charity.id %}">
+        <h3>{{ charity.name }}</h3>
+      </a>
+      <a href={{charity.webURL}}>Visit This Charity Website</a>
+      <p>rating: {{ charity.rating }}</p>
+      <p>{{ charity.city }}</p>
+    </div>
+  {% endfor %}
+
+<div class="pagination" style="margin-bottom: 10px;">
+    <span class="step-links">
+        {% if charities.has_previous %}
+            <a href="?page={{ charities.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ charities.number }} of {{ charities.paginator.num_pages }}
+        </span>
+
+        {% if charities.has_next %}
+            <a href="?page={{ charities.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock %}

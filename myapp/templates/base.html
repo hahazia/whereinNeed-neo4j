@@ -1,0 +1,111 @@
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Where In Need!</title>
+        <link rel="stylesheet" id="ample-style-css" href="http://wisdompets.com/wp-content/themes/ample/style.css?ver=4.8.3" type="text/css" media="all">
+        <style>
+
+            body {
+            font-family: "Lato", sans-serif;
+            }
+
+            .sidenav {
+            width: 130px;
+            position: fixed;
+            z-index: 1;
+            top: 20px;
+            left: 10px;
+            background: #80ABC8;
+            overflow-x: hidden;
+            padding: 8px 0;
+            }
+
+            .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #ffffff;
+            display: block;
+            }
+
+            .sidenav a:hover {
+            color: #064579;
+            }
+
+            .main {
+            margin-left: 140px; /* Same width as the sidebar + left position in px */
+            font-size: 28px; /* Increased text to enable scrolling */
+            padding: 0px 10px;
+            }
+
+            @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+}
+
+        </style>
+        <div style="float:right;margin-top:30px;margin-right:30px">
+            <a href="{% url 'login' %}">
+                <button type="button">
+                    Log in
+                 </button>
+            </a>      
+          </div>          
+    </head>
+    <body class="wide">
+        <div id="page" class="hfeed site">
+            <header>
+                <div class="header">
+                    <div class="main-head-wrap inner-wrap clearfix">
+                        <div id="header-logo-image">
+                            <a href=/>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSDDcSWfJOa5nJHL6VSMT4eZJgPTDf-AmczQ-9H-tANvx7jQksy" alt="Where in Need">
+                            </a>
+                        </div>
+                        <div id="header-text" class="">
+                            <h1 id="site-title">
+                                <a href="/" title="Where in Need!" rel="home">Where in Need!</a>
+                            </h1>
+                            <p>We offer you the easiest way to do donations in Illinois.</p>
+                        </div>
+                    </div>
+                        <div class="sidenav" >
+                                <a href="{% url 'home' %}">Home</a>
+                            <ul>
+                                <a href="{% url 'city' %}">City</a>
+                            <ul>
+                                <a href="{% url 'rating' %}">Rating</a>
+                            </ul>
+                            <ul>
+                                <a href="{% url 'category' %}">Category</a>
+                            </ul>        
+                        </div>
+                        <div>
+                            <img src="http://wisdompets.com/wp-content/uploads/2015/10/1500x400-header_114150655.jpg" alt="Where in Need">
+                        </div>                    
+                    <div>
+                        
+                    </div>
+                </div>
+            </header>
+            <div class="main-wrapper">
+                <div class="single-page clearfix">
+                    <div class="inner-wrap">
+                        <p style="font-size: 20px;">Where in Need! strives to blend the best rating charities in Illinois of different areas, including human services, animals, enviorment, civil rights etc, to offer a easier way for the potential donors to decide which charity they are interested in and also provide access to the charity website to make a donation.</p>
+                        <hr>
+                        <div>
+                        {% block content %}
+                        {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer id="colophon">
+                <div class="inner-wrap" style="color:aliceblue">
+                    Where in Need! was created for all kinds of people that are looking for one ore more charity to do their good, solely for the purpose of caring. All organizations with Where in Need! are real and waiting for donations.
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
