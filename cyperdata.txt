@@ -1,0 +1,35 @@
+LOAD CSV WITH HEADERS FROM "file:///organization.csv" AS row
+CREATE (n:organization)
+SET n = row
+
+LOAD CSV WITH HEADERS FROM "file:///category.csv" AS row
+CREATE (n:category)
+SET n = row
+
+LOAD CSV WITH HEADERS FROM "file:///city.csv" AS row
+CREATE (n:city)
+SET n = row
+
+LOAD CSV WITH HEADERS FROM "file:///rating.csv" AS row
+CREATE (n:rating)
+SET n = row
+
+CREATE INDEX ON :organization(OrganizationId)
+
+CREATE INDEX ON :category(CategoryId)
+
+CREATE INDEX ON :city(CityId)
+
+CREATE INDEX ON :rating(RatingId)
+
+MATCH (o:organization),(c:category)
+WHERE o.CategoryId = c.CategoryId
+CREATE (o)-[r:BELONG_TO]->(c)
+
+MATCH (o:organization),(a:city)
+WHERE o.CityId = a.CityId
+CREATE (o)-[r:LOCATE_AT]->(c)
+
+MATCH (o:organization),(s:rating)
+WHERE o.Rating = s.RatingId
+CREATE (o)-[r:RATE_IS]->(s)

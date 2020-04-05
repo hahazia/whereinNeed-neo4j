@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>DataViz</title>
+        <style type="text/css">
+            #viz {
+                width: 900px;
+                height: 700px;
+                
+            }
+        </style>
+        <script src="https://rawgit.com/neo4j-contrib/neovis.js/master/dist/neovis.js"></script>
+    </head>   
+    <script>
+        function draw() {
+            var config = {
+                container_id: "viz",
+                server_url: "bolt://localhost:7687",
+                server_user: "neo4j",
+                server_password: "password",
+                labels: {
+                    "organization": {
+                        caption: "CharityName"
+                    },
+                    "city":{
+                        caption: "City",
+                    },
+                    "category":{
+                        caption: "Category",
+                    },
+                    "rating":{
+                        caption:"Rating",
+                    }
+                },
+                relationships: {
+                    "LOCATE_AT": {
+                        caption: false,
+                    },
+                    "BELONG_TO": {
+                        caption: false,
+                    },
+                    "RATE_IS":{
+                        caption: false
+                    }
+                },
+                initial_cypher: "MATCH (o:organization)-[p:RATE_IS]->(r:rating{Rating:\"2\"})RETURN p,o,r"
+            }
+
+            var viz = new NeoVis.default(config);
+            viz.render();
+        }
+    </script>
+    <body onload="draw()">
+        <div id="viz"></div>
+    </body>
+</html>

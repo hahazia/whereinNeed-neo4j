@@ -2,14 +2,57 @@
   <style>
       a p:hover{
       color: #064579;
-    }
+      }
+      #viz {
+                width:1100;
+                height: 500px;
+                margin-left: auto; 
+                margin-right:auto; 
+                display:block;
+      }
+
   </style>
+   <script src="https://rawgit.com/neo4j-contrib/neovis.js/master/dist/neovis.js"></script>
 </head>
 
 {% extends "base.html" %}
 {%block image%}
-<img id="wp-custom-header class="wp-custom-header"
-                        src="http://wisdompets.com/wp-content/uploads/2015/10/1500x400-header_114150655.jpg" class="header-image" width='1100' alt="Where in Need">
+<script>
+  function draw() {
+      var config = {
+          container_id: "viz",
+          server_url: "bolt://localhost:7687",
+          server_user: "neo4j",
+          server_password: "password",
+          labels: {
+              "organization": {
+                  caption: "CharityName"
+              },
+              "city":{
+                  caption: "City",
+              },
+              "category":{
+                  caption: "Category",
+              }
+          },
+          relationships: {
+              "LOCATE_AT": {
+                  caption: false,
+              },
+              "BELONG_TO": {
+                  caption: false,
+              }
+          },
+          initial_cypher: "MATCH (o:organization)-[r1:LOCATE_AT]->(a:city{City:\"Champaign\"}),(o)-[r2:BELONG_TO]->(c:category) RETURN o,a,c,r1,r2"
+      }
+
+      var viz = new NeoVis.default(config);
+      viz.render();
+  }
+</script>
+<body onload="draw()">
+  <div id="viz"></div>
+</body>
 {%endblock%}
 {% block content %}
 <div>
