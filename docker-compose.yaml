@@ -1,0 +1,67 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    ports:
+      - '3306:3306'
+    volumes:
+      - "./mysql:/var/lib/mysql"
+    environment:
+       MYSQL_DATABASE: 'my-app-db'
+       MYSQL_USER: 'root'
+       MYSQL_PASSWORD: 'password'
+       MYSQL_ROOT_PASSWORD: 'password'
+    networks:
+      - db_network
+  graphdb:
+    image: neo4j:3.1.1
+    ports:
+      - "7687:7687"
+      - "7474:7474"
+    volumes:
+      - ./neo4j/data:/data 
+      - ./neo4j/logs:/logs
+      - ./neo4j/import:/var/lib/neo4j/import
+    links:
+      - web
+
+    
+  web:
+    restart: always
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/my_app_dir
+      - static-volume:/my_app_dir/collected_static
+      - .db_data/db.sqlite3:/db.sqlite3
+    expose:
+      - "8000"
+    depends_on:
+      - db
+
+
+    networks:
+      - web_network
+      - db_network
+  nginx:
+    restart: always
+    image: nginx:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - static-volume:/my_app_dir/collected_static
+      - ./config/nginx:/etc/nginx/conf.d
+    depends_on:
+      - web
+    networks:
+      - web_network
+
+networks:
+  web_network:
+    driver: bridge
+  db_network:
+    driver: bridge
+
+volumes:
+  static-volume:

@@ -1,0 +1,101 @@
+OrganizationId,WebsiteURL,CharityName,Ein,Rating,CategoryId,CityId,PostalCode,StreetAddress
+1,http://www.angelman.org/,Angelman Syndrome Foundation,593092842,4,6,1,60504,75 Executive Drive
+2,http://al-furqaan.org/,Al-Furqaan Foundation,200310701,3,10,2,60440,519 East Briarcliff Road
+3,http://www.brookfieldzoo.org,Chicago Zoological Society,362167016,3,1,3,60513,3300 Golf Road
+4,https://accessdupage.org,Dupage Health Coalition,364448208,4,6,4,60188,511 Thornhill Drive
+5,http://www.communitysharesillinois.org,Community Shares of Illinois,363073918,2,8,5,61820,44 E. Main Street
+6,http://www.adlerplanetarium.org,Adler Planetarium,366210902,3,2,6,60605,1300 South Lake Shore Drive
+7,http://www.naturemuseum.org/,Chicago Academy of Sciences / Peggy Notebaert Nature Museum,360895575,3,2,6,60614,2430 North Cannon Drive
+8,http://www.chicagochildrensmuseum.org/,Chicago Children's Museum,363162484,3,2,6,60611,Navy Pier
+9,http://www.chicagohistory.org,Chicago History Museum,362167004,3,2,6,60614,1601 North Clark Street
+10,http://chicagohumanities.org/,Chicago Humanities Festival,367148236,3,2,6,60654,500 North Dearborn
+11,http://www.chicagopubliclibraryfoundation.org/,Chicago Public Library Foundation,363480353,4,2,6,60602,20 North Michigan Avenue
+12,http://chicagopublicmedia.org/,Chicago Public Media,363687394,3,2,6,60611,Navy Pier
+13,http://www.chicagoshakes.com,Chicago Shakespeare Theater,363467607,4,2,6,60611,800 East Grand Avenue
+14,http://www.cso.org,Chicago Symphony Orchestra,362167823,3,2,6,60604,220 South Michigan Avenue
+15,https://www.bpncchicago.org/,Brighton Park Neighborhood Council,364229387,4,3,6,60632,4477 South Archer Avenue
+16,http://www.chicagocares.org,Chicago Cares,363777709,4,3,6,60606,2 North Riverside
+17,http://www.enlacechicago.org/,Enlace Chicago,363727669,3,3,6,60623,2756 South Harding Avenue
+18,http://www.advanceillinois.org/,Advance Illinois,262052733,3,4,6,60601,303 East Wacker Drive
+19,http://www.bigshouldersfund.org,Big Shoulders Fund,363490557,4,4,6,60607,212 West Van Buren
+20,http://capechicago.org,Chicago Arts Partnerships in Education,363969334,3,4,6,60604,228 South Wabash Avenue
+21,http://www.ccchoir.org,Chicago Children's Choir,510140419,3,4,6,60602,78 East Washington Street
+22,http://chicagohopeacademy.org/,Chicago Hope Academy,364244054,3,4,6,60612,2189 West Bowler Street
+23,https://www.chicagoscholars.org/,Chicago Scholars Foundation,364117530,4,4,6,60604,247 S. State Street
+24,http://www.casel.org/,"Collaborative for Academic, Social, and Emotional Learning",205884201,4,4,6,60607,815 West Van Buren Street
+25,https://www.cisofchicago.org/,Communities in Schools of Chicago,363591326,4,4,6,60607,815 West Van Buren Street
+26,http://www.dmsf.org/,Daniel Murphy Scholarship Fund,363675466,3,4,6,60606,309 West Washington
+27,https://www.epicacademy.org/,Epic Academy,208674711,3,4,6,60617,8255 S. Houston Avenue
+28,http://www.greatlakes.org,Alliance For The Great Lakes,237104524,4,5,6,60601,150 North Michigan Avenue
+29,http://www.cnt.org,Center for Neighborhood Technology,362967283,2,5,6,60602,17 North State Street #1400
+30,http://www.gatewaygreen.org,Chicago Gateway Green,363764084,3,5,6,60654,33 West Kinzie Street
+31,http://www.elpc.org,Environmental Law and Policy Center,363866530,4,5,6,60601,35 East Wacker Drive
+32,http://eatrightfoundation.org/,Academy of Nutrition and Dietetics Foundation,366150906,4,6,6,60606,120 South Riverside Plaza
+33,http://www.alz.org,Alzheimer's Association,133039601,3,6,6,60601,225 North Michigan Avenue
+34,http://www.abta.org,American Brain Tumor Association,237286648,4,6,6,60631,8550 West Bryn Mawr Avenue
+35,http://www.assh.org/afsh/,American Foundation for Surgery of the Hand,742428242,4,6,6,60607,822 West Washington Boulevard
+36,http://www.lung.org,"American Lung Association, National Headquarters",131632524,4,6,6,60601,55 West Wacker Drive
+37,https://amafoundation.org/,American Medical Association Foundation,366080517,1,6,6,60611,330 North Wabash Avenue
+38,http://www.bearnecessities.org/,Bear Necessities Pediatric Cancer Foundation,363874655,3,6,6,60601,55 West Wacker Drive
+39,http://www.thebrf.org/,Brain Research Foundation,362477928,3,6,6,60602,111 West Washington Street
+40,https://www.brightpink.org/,Bright Pink,510619889,3,6,6,60654,670 N. Clark Street
+41,https://camponestep.org/,Children's Oncology Services,364263831,4,6,6,60610,213 West Institute Place
+42,http://www.cureepilepsy.org,Citizens United for Research in Epilepsy,364253176,3,6,6,60611,420 N. Wabash Avenue
+43,http://www.dbsalliance.org/,"Depression and Bipolar Support Alliance, National Office",363379124,3,6,6,60604,55 East Jackson Boulevard
+44,http://www.dystonia-foundation.org/,Dystonia Medical Research Foundation,953378526,4,6,6,60601,One East Wacker Drive
+45,http://www.advancingjustice-chicago.org/,Asian Americans Advancing Justice - Chicago,363844385,3,7,6,60640,4753 North Broadway
+46,http://www.bettergov.org/,Better Government Association,360802950,4,7,6,60606,223 West Jackson Boulevard
+47,http://www.cgla.net/,Cabrini-Green Legal Aid,362775706,3,7,6,60603,6 South Clark Street
+48,https://www.carpls.org/,CARPLS,363863573,4,7,6,60602,17 North State Street
+49,http://www.centeronhalsted.org,Center on Halsted,510178807,4,7,6,60613,3656 North Halsted
+50,http://chicagobarfoundation.org/,Chicago Bar Foundation,366109584,3,7,6,60604,321 South Plymouth Court
+51,http://www.cfw.org/,Chicago Foundation for Women,363348160,4,7,6,60603,140 S. Dearborn Street
+52,http://clccrul.org/,Chicago Lawyers' Committee for Civil Rights Under Law,510189264,2,7,6,60602,100 North LaSalle Street
+53,http://www.clclaw.org/,Chicago Legal Clinic,363200465,3,7,6,60617,2938 East 91st Street
+54,http://www.cvls.org/,Chicago Volunteer Legal Services,237164989,3,7,6,60602,33 North Dearborn Street
+55,http://www.actionforhealthykids.org/,Action for Healthy Kids,470902020,3,8,6,60607,600 West Van Buren Boulevard
+56,http://alternativesyouth.org/,Alternatives,362720602,3,8,6,60640,4730 North Sheridan Road
+57,http://www.bbbschgo.org/,Big Brothers Big Sisters of Metropolitan Chicago,362681212,4,8,6,60661,560 West Lake Street
+58,http://www.bgcc.org/,Boys & Girls Clubs of Chicago,362166997,3,8,6,60612,2102 West Monroe Street
+59,http://www.breakthrough.org,Breakthrough,363810926,4,8,6,60624,402 N. St. Louis Avenue
+60,http://buildchicago.org/,"BUILD, Inc.",237022085,4,8,6,60644,5100 West Harrison
+61,http://www.economicprogress.org/,Center for Economic Progress,363693728,2,8,6,60661,567 West Lake Street
+62,http://www.chicagohomeless.org,Chicago Coalition for the Homeless,363292607,4,8,6,60601,70 East Lake Street
+63,http://www.chicagolights.org,Chicago Lights,363786331,3,8,6,60611,126 East Chestnut Street
+64,http://cpdmemorial.org/,Chicago Police Memorial Foundation,562450501,2,8,6,60607,1407 West Washington Boulevard
+65,http://www.chicagoyouthcenters.org,Chicago Youth Centers,362344429,3,8,6,60604,218 South Wabash Avenue
+66,http://www.chicagoyouthprograms.org/,Chicago Youth Programs,363635676,4,8,6,60615,5350 South Prairie Avenue
+67,http://cawc.org,Connections for Abused Women and their Children,362950380,4,8,6,60651,1116 North Kedzie Avenue
+68,http://www.deborahsplace.org/,Deborah's Place,363382973,4,8,6,60612,2822 West Jackson Boulevard
+69,http://www.100clubchicago.org/,100 Club of Chicago,366158087,3,8,6,60611,875 North Michigan Avenue
+70,http://www.cta-usa.org,Call to Action,363003308,2,10,6,60618,2135 West Roscoe Street
+71,https://www.civicfed.org,Civic Federation,362170124,3,11,6,60602,10 North Dearborn Street
+72,http://www.animalwelfareleague.com,Animal Welfare League,362235155,3,1,6,60415,10305 Southwest Highway
+73,http://barnabasfoundation.com/,Barnabas Foundation,362904503,4,3,7,60417,3801 Eagle Nest Drive
+74,http://www.administerjustice.org/,Administer Justice,364348917,3,7,8,60123,1750 Grandstand Place
+75,http://curesma.org/,Cure SMA,363320440,4,6,9,60007,925 Busse Road
+76,http://www.fabretto.org,Fabretto,363894824,4,4,10,60201,1563 Sherman Ave
+77,http://dermatologyfoundation.org/,Dermatology Foundation,46115524,3,6,10,60201,1560 Sherman Avenue
+78,http://carenetdupage.com/,Caring Network NFP,363154700,2,8,11,60137,1200 Roosevelt Road
+79,http://www.bridgecommunities.org,Bridge Communities,363705951,4,8,11,60137,505 Crescent Boulevard
+80,http://www.chicagobotanic.org,Chicago Botanic Garden,362225482,3,5,12,60022,1000 Lake Cook Road
+81,http://www.wgaesf.org,Evans Scholars Foundation,362518129,4,4,12,60026,2501 Patriot Boulevard
+82,http://chestfoundation.org/,CHEST Foundation,363286520,3,6,12,60026,2595 Patriot Boulevard
+83,http://collisioneducationfoundation.org/,Collision Repair Education Foundation,363768028,4,4,13,60192,5125 Trillium Boulevard
+84,http://www.brighthope.org,Bright Hope International,237004991,3,10,13,60169,2060 Stonington Avenue
+85,https://africanvisionofhope.org/,African Vision of Hope,710929252,3,9,14,62062,Eight Professional Park Drive
+86,https://dupagechildrens.org/,DuPage Children's Museum,363565001,3,2,15,60540,301 North Washington Street
+87,http://alphausa.org,Alpha USA,133962840,3,10,16,60540,1635 Emerson Ln
+88,http://www.cancerwellness.org,Cancer Wellness Center,363604463,3,6,17,60062,215 Revere Drive
+89,http://www.blackhawkscouting.org/,"Boy Scouts of America, Blackhawk Area Council",362169127,3,8,18,61107,2820 McFarland Road
+90,https://www.calsangels.org/,Cal's All Star Angel Foundation Inc.,208811843,4,6,19,60175,2422 W. Main Street
+91,http://www.avmf.org,American Veterinary Medical Foundation,366117739,3,1,20,60173,1931 North Meacham Road
+92,http://www.andersonanimalshelter.org/,Anderson Animal Shelter,366164626,4,1,21,60177,1000 South La Fox Street
+93,http://www.alplm.org/,Abraham Lincoln Presidential Library Foundation,364385644,2,2,22,62701,500 East Madison Street
+94,http://www.centralilfoodbank.org/,Central Illinois Foodbank,371106465,4,8,22,62703,1937 East Cook Street
+95,http://www.awana.org,Awana,362428692,3,10,23,60107,One East Bode Road
+96,http://www.cuhumane.org,Champaign County Humane Society,370714217,3,1,24,61802,1911 East Main Street
+97,http://www.eifoodbank.org/,Eastern Illinois Foodbank,371130252,4,8,24,61802,2405 North Shore Drive
+98,http://www.agcltd.org,All God's Children,382992649,4,9,25,60181,P.O. Box 5909
+99,http://dupagepads.org/,DuPage PADS,363675494,4,8,26,60187,601 West Liberty
+100,http://www.cbmus.org,Christian Blind Mission International,362959883,4,9,26,60187,PO Box 340
