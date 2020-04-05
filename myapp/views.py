@@ -15,6 +15,8 @@ from django.contrib.auth import update_session_auth_hash
 from .models import Charity, Categ
 from .forms import *
 
+
+
 def home(request):
     #charities = Charity.objects.all()
     charity_list = Charity.objects.all()
