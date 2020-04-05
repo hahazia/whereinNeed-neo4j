@@ -11,13 +11,28 @@
 <div>
     <h1>Ratings:</h1>
         {% for rating in ratings %}
-          <hr>
-          <h3>{{rating}}</h3>
-          {%for charity in charities%}
-             {%if charity.rating == rating%}
-             <a href={{charity.webURL}}><p>{{charity.name}}</p></a>             
-             {%endif%}
-          {% endfor %}    
-        {% endfor %}
-</div>
+        <hr>
+      
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" 
+                  href="#collapse{{forloop.counter}}">{{rating}}</a>
+                </h4>
+              </div>
+              <div id="collapse{{forloop.counter}}" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    {%for charity in charities%}
+                      {%if charity.rating == rating%}
+                        <a href={{charity.webURL}}><p>{{charity.name}}</p></a>             
+                      {%endif%}
+                    {% endfor %}    
+         
+                 </div>       
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
 {% endblock %}

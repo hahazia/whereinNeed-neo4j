@@ -1,25 +1,46 @@
+
 <head>
+  
   <style>
       a p:hover{
-      color: #064579;
-    }
+      color: #064579;}
+
   </style>
 </head>
 
 {% extends "base.html" %}
 {% block content %}
+
 <div>
     <h1>Category:</h1>
     {% for category in categories %}
+
       <hr>
-      <h3>{{category}}</h3> 
-      {%for charity in charities%}
-        {%for categ in charity.category.all%}
-          {%if category == categ%}
-          <a href={{charity.webURL}}><p>{{charity.name}}</p></a>
-          {%endif%}  
-        {%endfor%}
-      {%endfor%}      
-    {% endfor %}
-</div>
+      
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" 
+                href="#collapse{{forloop.counter}}">{{category}}</a>
+              </h4>
+            </div>
+            <div id="collapse{{forloop.counter}}" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  {%for charity in charities%}
+                     {%for categ in charity.category.all%}
+                        {%if category == categ%}
+                            <a href={{charity.webURL}}><p>{{charity.name}}</p></a>     
+                        {%endif%}  
+                      {%endfor%}
+                  {%endfor%}
+               </div>       
+        </div>
+      </div>
+    </div>
+
+    {% endfor %} 
+       
+      
+
 {% endblock %}
