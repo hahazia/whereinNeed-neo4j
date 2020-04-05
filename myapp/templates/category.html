@@ -15,48 +15,51 @@
 
   </style>
    <script src="https://rawgit.com/neo4j-contrib/neovis.js/master/dist/neovis.js"></script>
+   <script>
+    function myfunc(e){
+      m=$(e).text()
+      draw(m)}
+
+    function draw(e) {
+       
+        var config = {
+            container_id: "viz",
+            server_url: "bolt://localhost:7687",
+            server_user: "neo4j",
+            server_password: "password",
+            labels: {
+                "organization": {
+                    caption: "CharityName"
+                },
+                "city":{
+                    caption: "City",
+                },
+                "category":{
+                    caption: "Category",
+                }
+            },
+            relationships: {
+                "LOCATE_AT": {
+                    caption: false,
+                },
+                "BELONG_TO": {
+                    caption: false,
+                }
+            },
+            initial_cypher: "MATCH (o:organization)-[r:BELONG_TO]->(c:category{Category:\""+e+"\"}) RETURN o,r,c"
+        }
+       
+        var viz = new NeoVis.default(config);
+        viz.render();}
+
+
+    </script>
 </head>
 
 
-
-
 {% extends "base.html" %}
-
-
 {% block image %}
-<script>
-  function draw() {
-      var config = {
-          container_id: "viz",
-          server_url: "bolt://localhost:7687",
-          server_user: "neo4j",
-          server_password: "password",
-          labels: {
-              "organization": {
-                  caption: "CharityName"
-              },
-              "city":{
-                  caption: "City",
-              },
-              "category":{
-                  caption: "Category",
-              }
-          },
-          relationships: {
-              "LOCATE_AT": {
-                  caption: false,
-              },
-              "BELONG_TO": {
-                  caption: false,
-              }
-          },
-          initial_cypher: "MATCH (o:organization)-[r:BELONG_TO]->(c:category{Category:\"Education\"}) RETURN o,r,c"
-      }
 
-      var viz = new NeoVis.default(config);
-      viz.render();
-  }
-</script>
 <body onload="draw()">
   <div id="viz"></div>
 </body>
@@ -64,6 +67,10 @@
 
 {% block content %}
 
+<script>
+
+
+</script>
 <div>
     <h1>Category:</h1>
     {% for category in categories %}
@@ -72,8 +79,8 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" 
-                href="#collapse{{forloop.counter}}">{{category}}</a>
+                  <a id = "{{forloop.counter}}" data-toggle="collapse" data-parent="#accordion" 
+                href="#collapse{{forloop.counter}}" onclick='myfunc(this)'>{{category}}</a>
               </h4>
             </div>
             <div id="collapse{{forloop.counter}}" class="panel-collapse collapse in">

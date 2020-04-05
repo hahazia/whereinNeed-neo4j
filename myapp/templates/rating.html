@@ -13,50 +13,56 @@
    
   </style>
   <script src="https://rawgit.com/neo4j-contrib/neovis.js/master/dist/neovis.js"></script>
+  <script>
+      function myfunc(e){
+      m=$(e).text()
+      draw(m)}
+
+    function draw(e) {
+        var config = {
+            container_id: "viz",
+            server_url: "bolt://localhost:7687",
+            server_user: "neo4j",
+            server_password: "password",
+            labels: {
+                "organization": {
+                    caption: "CharityName"
+                },
+                "city":{
+                    caption: "City",
+                },
+                "category":{
+                    caption: "Category",
+                },
+                "rating":{
+                    caption:"Rating",
+                }
+            },
+            relationships: {
+                "LOCATE_AT": {
+                    caption: false,
+                },
+                "BELONG_TO": {
+                    caption: false,
+                },
+                "RATE_IS":{
+                    caption: false
+                }
+            },
+            initial_cypher: "MATCH (o:organization)-[p:RATE_IS]->(r:rating{Rating:\""+e+"\"})RETURN p,o,r"
+        }
+  
+        var viz = new NeoVis.default(config);
+        viz.render();
+    }
+  </script>
+  
 </head>
 
 
 {% extends "base.html" %}
 {%block image%}
-<script>
-  function draw() {
-      var config = {
-          container_id: "viz",
-          server_url: "bolt://localhost:7687",
-          server_user: "neo4j",
-          server_password: "password",
-          labels: {
-              "organization": {
-                  caption: "CharityName"
-              },
-              "city":{
-                  caption: "City",
-              },
-              "category":{
-                  caption: "Category",
-              },
-              "rating":{
-                  caption:"Rating",
-              }
-          },
-          relationships: {
-              "LOCATE_AT": {
-                  caption: false,
-              },
-              "BELONG_TO": {
-                  caption: false,
-              },
-              "RATE_IS":{
-                  caption: false
-              }
-          },
-          initial_cypher: "MATCH (o:organization)-[p:RATE_IS]->(r:rating{Rating:\"2\"})RETURN p,o,r"
-      }
 
-      var viz = new NeoVis.default(config);
-      viz.render();
-  }
-</script>
 <body onload="draw()">
   <div id="viz"></div>
 </body>
@@ -73,11 +79,11 @@
               <div class="panel-heading">
                   <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" 
-                  href="#collapse{{forloop.counter}}">{{rating}}</a>
+                  href="#collapse{{forloop.counter}}" onclick='myfunc(this)'>{{rating}}</a>
                 </h4>
               </div>
               <div id="collapse{{forloop.counter}}" class="panel-collapse collapse in">
-                  <div class="panel-body">
+                  <div class="panel-body" >
                     {%for charity in charities%}
                       {%if charity.rating == rating%}
                         <a href={{charity.webURL}}><p>{{charity.name}}</p></a>             

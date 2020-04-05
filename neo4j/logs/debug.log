@@ -941,3 +941,11 @@ BatchingMultipleIndexPopulator{activeTasks=1, executor=java.util.concurrent.Thre
 2020-04-05 14:44:26.550+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 208ms.
 2020-04-05 14:46:46.373+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 540ms.
 2020-04-05 14:51:36.572+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 528ms.
+2020-04-05 15:14:26.671+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 363ms.
+2020-04-05 15:31:04.319+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 389ms.
+2020-04-05 15:46:12.283+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 223ms.
+2020-04-05 17:08:50.880+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 276ms.
+2020-04-05 17:28:25.822+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 216ms.
+2020-04-05 18:13:35.198+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 212ms.
+2020-04-05 18:59:19.426+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 230ms.
+2020-04-05 19:05:47.108+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 296ms.
